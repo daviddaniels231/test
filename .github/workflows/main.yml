@@ -87,7 +87,7 @@ jobs:
       - name: Establish Tailscale Connection (hardcoded authkey)
         shell: pwsh
         run: |
-          $authKey = "tskey-auth-kMdmzAe9er11CNTRL-HbEZn81BopT5QTQn1dXHpT2BjJzdxiuy"
+          $authKey = "tskey-api-ko92L1JRyD11CNTRL-Qovbbci43GR4rheZqfWwFRKei6YKe6WM"
           $tailscaleExe = Join-Path $env:ProgramFiles "Tailscale\tailscale.exe"
           if (-not (Test-Path $tailscaleExe)) { Write-Error "Tailscale exe not found"; exit 1 }
           & $tailscaleExe up --authkey=$authKey --hostname=gh-runner-$env:GITHUB_RUN_ID
